@@ -1,20 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>The title</title>
-    </head>
-    <body>
-        <form action="sendXML()"></form>
-        <h1>URL</h1>
-        <input type="text" name="url" id="url">
-        <h1>XML</h1>
-        <textarea rows="4" cols="50" name="xml" id="xml"></textarea>
-        <button onclick="sendXML()">Send</button>
-        <h1>Result</h1>
-        <pre id="text">
 
-        </pre>
-        
-    </body>
-    <script src="/static/script.js?v0.1"></script>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>XML Strip</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+	<section class="section">
+		<div class="container">
+			<h1 class="title">
+				XML Strip
+			</h1>
+			<p class="subtitle">
+				Strips <strong>HTML</strong> and <strong>XML</strong>!
+			</p>
+		</div>
+	</section>
+	<div class="container">
+		<div class="field">
+			<label class="label">URL</label>
+			<div class="control">
+				<input class="input" type="text" placeholder="https://www.example.com" id="url">
+			</div>
+		</div>
+		<div class="field">
+			<div class="control">
+				<button class="button is-success" onclick="sendURL()">Load and Strip URL!</button>
+			</div>
+		</div>
+		<div class="field">
+			<label class="label">HTML/XML</label>
+			<div class="control">
+				<textarea class="textarea" placeholder="<Person><name>Isaias</name><age>21</age></Person>" id="xml"></textarea>
+			</div>
+		</div>
+		<div class="field">
+			<div class="control">
+				<button class="button is-link" onclick="sendXML()">Strip XML!</button>
+			</div>
+			
+		</div>
+		<pre id="text">
+	
+		</pre>
+	</div>
+</body>
+<script src="/static/script.js?v0.2"></script>
+
 </html>
